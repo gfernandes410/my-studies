@@ -1,16 +1,10 @@
-function LoggerAndReturn(thing) {
-    return thing;
+// ------------------------------------------------------------
+// ---------- seção 2.5----------------------------------------
+// function LoggerAndReturn<T>(thing: T) : T {
+//     return thing
+// }
+function checkElementAt(items, toBeChecked, atIndex) {
+    return items[atIndex] == toBeChecked;
 }
-var massageWithString = LoggerAndReturn('massageWithString Word!');
-var massageWithOutString = LoggerAndReturn('massageWithOutString Word!');
-var massage2 = LoggerAndReturn(2);
-console.log(massageWithString);
-console.log(massageWithOutString);
-console.log(massage2);
-function getArray(items) {
-    return new Array().concat(items);
-}
-var myNumArr = getArray([100, 200, 300]);
-var myStrArr = getArray(['Hello', 'Word']);
-console.log(myNumArr);
-console.log(myNumArr);
+var checker = checkElementAt;
+var items = [1, 3, 5, 6];

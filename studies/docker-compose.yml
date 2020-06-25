@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: loopback-studies
+    entrypoint: ./.docker/entrypoint.sh
+    ports:
+      - 3000:3000
+    volumes: 
+      - .:/home/node/app
+    depends_on: 
+      - postgres
+
+  postgres:
+    image: postgres
+    container_name: db_course_loopack_4
+    tty: true
+    volumes:
+      - ./postgres:/postgres
+      - /var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=admin

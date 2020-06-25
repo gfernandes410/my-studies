@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "tsc app.ts && node app.js"
+    "dev": "tsc --target ES5 --experimentalDecorators app.ts && node app.js"
   },
   "author": "",
   "license": "ISC"
